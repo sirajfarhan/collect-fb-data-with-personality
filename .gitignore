@@ -82,4 +82,5 @@ typings/
 cookies.pkl
 
 dataset/*.json
-dataset/profiles.csv
+dataset/*/*
+dataset/*
