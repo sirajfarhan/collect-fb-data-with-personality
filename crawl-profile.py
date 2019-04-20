@@ -12,8 +12,8 @@ driver = webdriver.Chrome()
 
 cookies = pickle.load(open("cookies.pkl", "rb"))
 
-data = pd.read_csv("dataset/profiles.csv")
-data = data.drop("Unnamed: 0",axis=1)
+data = pd.read_csv("dataset/profiles.csv", header=0)
+# data = data.drop("Unnamed: 0",axis=1)
 data = data.sample(data.shape[0])
 data['url_id'] = data.url.str.replace('https://www.facebook.com/', '')
 
